@@ -2,7 +2,7 @@
 """
 import doctest
 import unittest
-from eea.api.provides.tests.base import FUNCTIONAL_TESTING
+from eea.api.objectprovides.tests.base import FUNCTIONAL_TESTING
 from plone.testing import layered
 
 OPTIONFLAGS = (doctest.REPORT_ONLY_FIRST_FAILURE |
@@ -19,7 +19,7 @@ def test_suite():
             doctest.DocFileSuite(
                 'README.txt',
                 optionflags=OPTIONFLAGS,
-                package='eea.api.provides'),
+                package='eea.api.objectprovides'),
             layer=FUNCTIONAL_TESTING),
     ])
 

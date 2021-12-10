@@ -5,7 +5,7 @@ services:
     ports:
     - "8080"
     volumes:
-    - ../../:/plone/instance/src/eea.api.provides
+    - ../../:/plone/instance/src/eea.api.objectprovides
     environment:
-      ADDONS: "eea.api.provides[test]"
-      DEVELOP: "src/eea.api.provides"
+      ADDONS: "eea.api.objectprovides[test]"
+      DEVELOP: "src/eea.api.objectprovides"

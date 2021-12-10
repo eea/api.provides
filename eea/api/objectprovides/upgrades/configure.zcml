@@ -6,11 +6,11 @@
   <genericsetup:upgradeSteps
     source="*"
     destination="1.0"
-    profile="eea.api.provides:default">
+    profile="eea.api.objectprovides:default">
 
     <genericsetup:upgradeDepends
-       title="Import all steps from eea.api.provides default profile"
-       import_profile="eea.api.provides:default"
+       title="Import all steps from eea.api.objectprovides default profile"
+       import_profile="eea.api.objectprovides:default"
       />
 
   </genericsetup:upgradeSteps>

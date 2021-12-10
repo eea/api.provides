@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-        GIT_NAME = "eea.api.provides"
+        GIT_NAME = "eea.api.objectprovides"
         SONARQUBE_TAGS = "www.eea.europa.eu"
     }
 

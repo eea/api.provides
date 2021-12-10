@@ -1,14 +1,14 @@
 ==========================
-eea.api.provides
+eea.api.objectprovides
 ==========================
-.. image:: https://ci.eionet.europa.eu/buildStatus/icon?job=eea/eea.api.provides/develop
-  :target: https://ci.eionet.europa.eu/job/eea/job/eea.api.provides/job/develop/display/redirect
+.. image:: https://ci.eionet.europa.eu/buildStatus/icon?job=eea/eea.api.objectprovides/develop
+  :target: https://ci.eionet.europa.eu/job/eea/job/eea.api.objectprovides/job/develop/display/redirect
   :alt: Develop
-.. image:: https://ci.eionet.europa.eu/buildStatus/icon?job=eea/eea.api.provides/master
-  :target: https://ci.eionet.europa.eu/job/eea/job/eea.api.provides/job/master/display/redirect
+.. image:: https://ci.eionet.europa.eu/buildStatus/icon?job=eea/eea.api.objectprovides/master
+  :target: https://ci.eionet.europa.eu/job/eea/job/eea.api.objectprovides/job/master/display/redirect
   :alt: Master
 
-The eea.api.provides is a Plone add-on
+The eea.api.objectprovides is a Plone add-on
 
 .. contents::
 
@@ -23,43 +23,43 @@ Main features
 Install
 =======
 
-* Add eea.api.provides to your eggs section in your buildout and
+* Add eea.api.objectprovides to your eggs section in your buildout and
   re-run buildout::
 
     [buildout]
     eggs +=
-      eea.api.provides
+      eea.api.objectprovides
 
 * You can download a sample buildout from:
 
-  - https://github.com/eea/eea.api.provides/tree/master/buildouts/plone4
-  - https://github.com/eea/eea.api.provides/tree/master/buildouts/plone5
+  - https://github.com/eea/eea.api.objectprovides/tree/master/buildouts/plone4
+  - https://github.com/eea/eea.api.objectprovides/tree/master/buildouts/plone5
 
 * Or via docker::
 
-    $ docker run --rm -p 8080:8080 -e ADDONS="eea.api.provides" plone
+    $ docker run --rm -p 8080:8080 -e ADDONS="eea.api.objectprovides" plone
 
-* Install *eea.api.provides* within Site Setup > Add-ons
+* Install *eea.api.objectprovides* within Site Setup > Add-ons
 
 
 Buildout installation
 =====================
 
-- `Plone 4+ <https://github.com/eea/eea.api.provides/tree/master/buildouts/plone4>`_
-- `Plone 5+ <https://github.com/eea/eea.api.provides/tree/master/buildouts/plone5>`_
+- `Plone 4+ <https://github.com/eea/eea.api.objectprovides/tree/master/buildouts/plone4>`_
+- `Plone 5+ <https://github.com/eea/eea.api.objectprovides/tree/master/buildouts/plone5>`_
 
 
 Source code
 ===========
 
-- `Plone 4+ on github <https://github.com/eea/eea.api.provides>`_
-- `Plone 5+ on github <https://github.com/eea/eea.api.provides>`_
+- `Plone 4+ on github <https://github.com/eea/eea.api.objectprovides>`_
+- `Plone 5+ on github <https://github.com/eea/eea.api.objectprovides>`_
 
 
 Eggs repository
 ===============
 
-- https://pypi.python.org/pypi/eea.api.provides
+- https://pypi.python.org/pypi/eea.api.objectprovides
 - http://eggrepo.eea.europa.eu/simple
 
 
@@ -70,12 +70,12 @@ It has been developed and tested for Plone 4 and 5. See buildouts section above.
 
 How to contribute
 =================
-See the `contribution guidelines (CONTRIBUTING.md) <https://github.com/eea/eea.api.provides/blob/master/CONTRIBUTING.md>`_.
+See the `contribution guidelines (CONTRIBUTING.md) <https://github.com/eea/eea.api.objectprovides/blob/master/CONTRIBUTING.md>`_.
 
 Copyright and license
 =====================
 
-eea.api.provides (the Original Code) is free software; you can
+eea.api.objectprovides (the Original Code) is free software; you can
 redistribute it and/or modify it under the terms of the
 GNU General Public License as published by the Free Software Foundation;
 either version 2 of the License, or (at your option) any later version.

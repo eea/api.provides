@@ -15,14 +15,14 @@ class EEAFixture(PloneSandboxLayer):
     def setUpZope(self, app, configurationContext):
         """ Setup Zope
         """
-        import eea.api.provides
-        self.loadZCML(package=eea.api.provides)
-        z2.installProduct(app, 'eea.api.provides')
+        import eea.api.objectprovides
+        self.loadZCML(package=eea.api.objectprovides)
+        z2.installProduct(app, 'eea.api.objectprovides')
 
     def setUpPloneSite(self, portal):
         """ Setup Plone
         """
-        applyProfile(portal, 'eea.api.provides:default')
+        applyProfile(portal, 'eea.api.objectprovides:default')
 
         # Default workflow
         wftool = portal['portal_workflow']
@@ -44,9 +44,9 @@ class EEAFixture(PloneSandboxLayer):
     def tearDownZope(self, app):
         """ Uninstall Zope
         """
-        z2.uninstallProduct(app, 'eea.api.provides')
+        z2.uninstallProduct(app, 'eea.api.objectprovides')
 
 
 EEAFIXTURE = EEAFixture()
 FUNCTIONAL_TESTING = FunctionalTesting(bases=(EEAFIXTURE,),
-                                       name='EeaApiProvides:Functional')
+                                       name='EeaApiObjectprovides:Functional')

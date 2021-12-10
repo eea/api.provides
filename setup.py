@@ -1,10 +1,10 @@
-""" eea.api.provides Installer
+""" eea.api.objectprovides Installer
 """
 import os
 from os.path import join
 from setuptools import setup, find_packages
 
-NAME = 'eea.api.provides'
+NAME = 'eea.api.objectprovides'
 PATH = NAME.split('.') + ['version.txt']
 VERSION = open(join(*PATH)).read().strip()
 
@@ -33,7 +33,7 @@ setup(
     keywords='EEA Add-ons Plone Zope',
     author='European Environment Agency: IDM2 A-Team',
     author_email='eea-edw-a-team-alerts@googlegroups.com',
-    url='https://github.com/eea/eea.api.provides',
+    url='https://github.com/eea/eea.api.objectprovides',
     license='GPL version 2',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['eea'],

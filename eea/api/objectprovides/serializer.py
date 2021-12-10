@@ -1,7 +1,7 @@
 """ Overrides for the default Plone serialization
 """
 
-from eea.api.provides.interfaces import IEeaApiProvidesLayer
+from eea.api.objectprovides.interfaces import IEeaApiObjectprovidesLayer
 from plone.dexterity.interfaces import IDexterityContainer
 from plone.dexterity.interfaces import IDexterityContent
 from plone.restapi.interfaces import ISerializeToJson
@@ -11,14 +11,14 @@ from zope.interface import implementer, providedBy
 
 
 @implementer(ISerializeToJson)
-@adapter(IDexterityContent, IEeaApiProvidesLayer)
+@adapter(IDexterityContent, IEeaApiObjectprovidesLayer)
 class SerializeToJson(dxcontent.SerializeToJson):
     ''' serialize to json '''
     def __call__(self, version=None, include_items=True):
         res = super(SerializeToJson, self).__call__(version, include_items)
 
-        if self.request.form.get('expand') == 'provides':
-            res['@provides'] = [
+        if self.request.form.get('expand') == 'objectprovides':
+            res['@objectprovides'] = [
                 '{}.{}'.format(interface.__module__, interface.__name__)
                 for interface in providedBy(self.context)]
 
@@ -26,15 +26,15 @@ class SerializeToJson(dxcontent.SerializeToJson):
 
 
 @implementer(ISerializeToJson)
-@adapter(IDexterityContainer, IEeaApiProvidesLayer)
+@adapter(IDexterityContainer, IEeaApiObjectprovidesLayer)
 class SerializeFolderToJson(dxcontent.SerializeFolderToJson):
     ''' serialize folder to json '''
     def __call__(self, version=None, include_items=True):
         res = super(SerializeFolderToJson, self).__call__(
             version, include_items)
 
-        if self.request.form.get('expand') == 'provides':
-            res['@provides'] = [
+        if self.request.form.get('expand') == 'objectprovides':
+            res['@objectprovides'] = [
                 '{}.{}'.format(interface.__module__, interface.__name__)
                 for interface in providedBy(self.context)]
 

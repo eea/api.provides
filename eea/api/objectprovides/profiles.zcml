@@ -8,19 +8,19 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="eea.api.provides"
+      title="eea.api.objectprovides"
       directory="profiles/default"
-      description="Installs the eea.api.provides add-on."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
+      description="Installs the eea.api.objectprovides add-on."
+      objectprovides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.post_install"
       />
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="eea.api.provides (uninstall)"
+      title="eea.api.objectprovides (uninstall)"
       directory="profiles/uninstall"
-      description="Uninstalls the eea.api.provides add-on."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
+      description="Uninstalls the eea.api.objectprovides add-on."
+      objectprovides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.uninstall"
       />
 
