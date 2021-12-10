@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layers>
+  <layer
+      name="eea.api.provides"
+      interface="eea.api.provides.interfaces.IEeaApiProvidesLayer"
+      />
+</layers>
