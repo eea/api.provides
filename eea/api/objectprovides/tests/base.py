@@ -1,12 +1,12 @@
 """ Base test cases
 """
 from Products.CMFPlone import setuphandlers
-from plone.testing import z2
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import PloneSandboxLayer
 from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import setRoles
+from plone.testing.zope import installProduct, uninstallProduct
 
 
 class EEAFixture(PloneSandboxLayer):
@@ -17,7 +17,7 @@ class EEAFixture(PloneSandboxLayer):
         """
         import eea.api.objectprovides
         self.loadZCML(package=eea.api.objectprovides)
-        z2.installProduct(app, 'eea.api.objectprovides')
+        installProduct(app, 'eea.api.objectprovides')
 
     def setUpPloneSite(self, portal):
         """ Setup Plone
@@ -44,7 +44,7 @@ class EEAFixture(PloneSandboxLayer):
     def tearDownZope(self, app):
         """ Uninstall Zope
         """
-        z2.uninstallProduct(app, 'eea.api.objectprovides')
+        uninstallProduct(app, 'eea.api.objectprovides')
 
 
 EEAFIXTURE = EEAFixture()
