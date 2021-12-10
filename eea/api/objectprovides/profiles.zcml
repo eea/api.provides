@@ -11,7 +11,7 @@
       title="eea.api.objectprovides"
       directory="profiles/default"
       description="Installs the eea.api.objectprovides add-on."
-      objectprovides="Products.GenericSetup.interfaces.EXTENSION"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.post_install"
       />
 
@@ -20,8 +20,14 @@
       title="eea.api.objectprovides (uninstall)"
       directory="profiles/uninstall"
       description="Uninstalls the eea.api.objectprovides add-on."
-      objectprovides="Products.GenericSetup.interfaces.EXTENSION"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.uninstall"
       />
+
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="eea.api.objectprovides-hiddenprofiles"
+      />
+
 
 </configure>
