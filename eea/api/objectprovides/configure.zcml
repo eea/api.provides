@@ -9,7 +9,15 @@
   <include package=".browser" />
   <include package=".upgrades" />
 
-  <adapter factory=".serializer.SerializeToJson" />
-  <adapter factory=".serializer.SerializeFolderToJson" />
+  <adapter factory=".object_provides.ObjectProvides" name="object_provides"/>
+
+  <plone:service
+    method="GET"
+    for="zope.interface.Interface"
+    factory=".object_provides.ObjectProvidesGet"
+    name="@object_provides"
+    permission="zope2.View"
+    />
+
 
 </configure>
