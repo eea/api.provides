@@ -17,20 +17,20 @@ class ObjectProvides(object):
         self.request = request
 
     def __call__(self, expand=False):
-        result = {
-            "object_provides": {
-                "@id": "{}/@object_provides".format(
-                    self.context.absolute_url())
+        if expand:
+            result = {
+                'object_provides': [
+                    '{}.{}'.format(interface.__module__, interface.__name__)
+                    for interface in providedBy(self.context)
+                ]
             }
-        }
-
-        if expand != 'object_provides':
-            return result
-
-        result['@object_provides'] = [
-            '{}.{}'.format(interface.__module__, interface.__name__)
-            for interface in providedBy(self.context)]
-
+        else:
+            result = {
+                "object_provides": {
+                    "@id": "{}/@object_provides".format(
+                        self.context.absolute_url())
+                }
+            }
         return result
 
 
