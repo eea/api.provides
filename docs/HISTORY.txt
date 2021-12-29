@@ -1,10 +1,12 @@
 Changelog
 =========
 
-1.1-dev0 - (unreleased)
+1.1 - (2021-12-29)
 ---------------------------
+* Change: Python2 / Plone4 compatible
+  [avoinea]
 
-1.0-dev0 - (unreleased)
+1.0 - (2021-12-29)
 -----------------------
 
 * Initial release.
