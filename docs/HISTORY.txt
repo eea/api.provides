@@ -3,10 +3,6 @@ Changelog
 
 1.1 - (2021-12-29)
 ---------------------------
-* Change: Python2 / Plone4 compatible [avoinea]
-
-1.1 - (2021-12-29)
----------------------------
 * Change: Python2 / Plone4 compatible
   [avoinea]
 
